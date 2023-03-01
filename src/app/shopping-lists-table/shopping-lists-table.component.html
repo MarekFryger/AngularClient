@@ -1,0 +1,19 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">List name</th>
+        <th scope="col">For day</th>
+        <th scope="col">Click to open</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of shoppingLists; let i = index"> 
+        <th scope="row">{{i+1}}</th>
+        <td>{{list.name}}</td>
+        <td>{{list.forDay | date:'medium'}}</td>
+        <td>{{list.active}}</td>
+        <td><button type="button" class="btn btn-primary btn-lg">Open</button></td>
+      </tr>
+    </tbody>
+  </table>
